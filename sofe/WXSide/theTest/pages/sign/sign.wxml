@@ -1,0 +1,11 @@
+<!--pages/sign/sign.wxml-->
+<view class="local">
+	<view class="cu-item" >
+    <text class="cuIcon-location lg text-green"></text>
+  </view>
+<view>{{location}}</view>
+</view>
+<view class="container student" bindtap="ToSign">
+		<view class="box">{{time}}</view>
+		<text>{{tip}}</text>
+</view>

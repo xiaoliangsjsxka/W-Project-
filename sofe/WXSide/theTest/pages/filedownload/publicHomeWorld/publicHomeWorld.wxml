@@ -1,0 +1,28 @@
+<!--pages/filedownload/publicHomeWorld/publicHomeWorld.wxml-->
+<view class="teacher">
+  <image  src='/images/002.png' style='width:50%;height:350rpx' class="tubiao"></image>
+  <view class="container" bindtap="showModal" data-target="DialogModal1">发起作业提交</view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">发起作业提交</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view class="cu-form-group margin-top">
+        <view class="title">作业标题</view>
+        <input placeholder="本次作业标题" value='{{title}}' bindinput='inputChange' data-type='title'></input>
+      </view>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="confirm">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/login/login.wxml-->
+<view>
+  <image src='/images/ok.png' style='width:100%;height:450rpx'></image>
+</view>
+<view class='bg-white text-lg login-section' wx:if='{{loginType}}'>
+  <view class="cu-form-group">
+    <view class="title" style='padding-left:10rpx'>
+      <text class='cuIcon-my text-blue'> </text>
+      <text> 帐号</text>
+    </view>
+    <input placeholder="输入你的帐号" value='{{account}}' bindinput='inputChange' data-type='account'></input>
+  </view>
+  <view class="cu-form-group" style='border-top:none'>
+    <view class="title" style='padding-left:10rpx'>
+      <text class='cuIcon-lock text-blue'> </text>
+      <text> 密码</text>
+    </view>
+    <input placeholder="输入你的密码" type='password' value='{{password}}' bindinput='inputChange' data-type='password'></input>
+  </view>
+  <radio-group style='width:100%' onchange='switchTo'>
+    <view style='display:flex;text-align:center' class='padding-sm'>
+      <view style='width:50%;'>
+        <radio class='radio blue margin-right-xs' checked value='1'></radio>教师
+      </view>
+      <view style='width:50%'>
+        <radio class='radio blue margin-right-xs'  value='2'></radio>学生
+      </view>
+    </view>
+  </radio-group>
+  <view class='padding-sm'>
+    <button class="cu-btn bg-blue margin-tb-sm lg" style='width:100%;margin:auto' bindtap='login'>登录</button>
+  </view>
+  <view bindtap="showLoginTab" class="tab">帐号登录说明</view>
+</view>

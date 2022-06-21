@@ -1,0 +1,50 @@
+<!--pages/mine/mine.wxml-->
+<view style="margin-bottom:20rpx" wx:if="{{flag == 1}}">
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      参考资料上传
+    </view>
+    <view class="action">
+      一次只能上传一个文件
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="solids" bindtap="ChooseFile" wx:if="{{fileList.length<4}}">
+        <text class="cuIcon-add"></text>
+      </view>
+    </view>
+  </view>
+  <view class="fileList bg-white">
+    <view class="fileItem" wx:for="{{fileList}}" wx:key="{{index}}">
+      <view>{{item.name}}</view>
+      <view class="cu-tag bg-red" catchtap="DelFile" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+  </view>
+  <button bindtap="uploadFile" class="cu-btn bg-blue lg" wx:if="{{fileList.length>0}}">上传</button>
+</view>
+<view class="cu-form-group space" bindtap="filedownload" wx:if="{{flag==1}}">
+  <view class="title">学生作业下载</view>
+  <view class="cuIcon-down text-green" style="font-size:43rpx"></view>
+</view>
+
+
+<view wx:if="{{flag==1}}">
+  <view class="cu-form-group" bindtap="publicHomeWorld">
+    <view class="title">发起作业提交</view>
+    <view class="cuIcon-upblock icon text-blue" style="font-size:43rpx"></view>
+  </view>
+</view>
+<view class="cu-form-group space" bindtap="toUpdatePassword">
+  <view class="title">密码修改</view>
+  <view class="cuIcon-lock icon text-blue" style="font-size:43rpx"></view>
+</view>
+
+<view wx:if="{{flag==2}}">
+  <view class="cu-form-group" bindtap="toHomeWorldList">
+    <view class="title">上传作业和下载参考资料</view>
+    <view class="cuIcon-upblock icon text-blue" style="font-size:43rpx"></view>
+  </view>
+</view>

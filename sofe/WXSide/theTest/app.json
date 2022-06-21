@@ -1,0 +1,57 @@
+{
+  "pages": [
+    
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/filedownload/publicHomeWorld/publicHomeWorld",
+    "pages/filedownload/filedownload",
+    "pages/filedownload/downHomeWorld/downHomeWorld",
+    "pages/mine/updatePassword/updatePassword",
+    "pages/signList/signList",
+    "pages/signList/signDetail/signDetail",
+    "pages/sign/sign",
+    "pages/index/index",
+    "pages/char/char",
+    "pages/teacherIndex/teacherIndex",
+    "pages/test/chart"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tabbar/index.png",
+      "selectedIconPath": "images/tabbar/index-cur.png"
+    },
+    {
+      "pagePath": "pages/char/char",
+      "text": "聊天",
+      "iconPath": "images/tabbar/chat.png",
+      "selectedIconPath": "images/tabbar/chat-cur.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "作业",
+      "iconPath": "images/tabbar/mine.png",
+      "selectedIconPath": "images/tabbar/mine-cur.png"
+    }
+  ]
+  },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
+}

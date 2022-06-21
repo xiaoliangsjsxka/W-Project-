@@ -1,0 +1,4 @@
+/**app.wxss**/
+@import "./colorui/main.wxss";/*引入colorui组件*/
+@import "./colorui/icon.wxss";/*引入colorui组件*/
+

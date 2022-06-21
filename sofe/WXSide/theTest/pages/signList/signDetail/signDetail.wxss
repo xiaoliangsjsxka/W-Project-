@@ -1,0 +1,21 @@
+/* pages/signList/signDetail/signDetail.wxss */
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+.item {
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.item .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 43rpx;
+  line-height: 43rpx;
+  margin-bottom: 10rpx;
+  font-size: 34rpx;
+  border: 1xp solid white;
+}

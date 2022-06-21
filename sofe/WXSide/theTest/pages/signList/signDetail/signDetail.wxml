@@ -1,0 +1,10 @@
+<!--pages/signList/signDetail/signDetail.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{detailList}}">
+    <view class="info">
+      <view class="name">{{item.name}}</view>
+      <view class="time text-green">{{item.time}}</view>
+    </view>
+    <view class="cuIcon-location text-green location">{{item.info}}</view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/filedownload/filedownload.wxml-->
+<!-- 教师 -->
+<view wx:if="{{flag==1}}">
+  <view>历史作业列表</view>
+  <view class="cu-form-group margin-top" wx:for="{{homeworldList}}" wx:key="index" data-id="{{item._id}}" bindtap="toDownload">
+		<view class="title">{{item.title}}</view>
+		<text class="cuIcon-right text-orange"></text>
+	</view>
+</view>
+
+<!-- 学生 -->
+<view wx:if="{{flag==2}}">
+  <view>作业上传</view>
+  <view class="cu-form-group margin-top" wx:for="{{homeworldList}}" wx:key="index" data-id="{{item._id}}" bindtap="uploadHomeworld">
+		<view class="title">{{item.title}}</view>
+		<text class="cuIcon-upblock text-orange"></text>
+  </view>
+  <view class="fileList bg-white">
+    <view class="fileItem" wx:for="{{fileList}}" wx:key="{{index}}">
+      <view>{{item.name}}</view>
+      <view class="cu-tag bg-red" catchtap="DelFile" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+  </view>
+  <button bindtap="uploadFile" class="cu-btn bg-blue lg" wx:if="{{fileList.length>0}}">上传</button>
+  <view style="margin-top:20rpx">参考资料下载</view>
+  <view class="cu-form-group margin-top" wx:for="{{referList}}" wx:key="index" data-referName="{{item.fileName}}" bindtap="downRefer">
+		<view class="title">{{item.fileName}}</view>
+		<text class="cuIcon-down text-orange"></text>
+  </view>
+</view>

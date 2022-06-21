@@ -1,0 +1,33 @@
+/* pages/login/login.wxss */
+.login-section{
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  left: 5%;
+  top:35%;
+  border-radius: 20rpx;
+  padding:20rpx 20rpx 0px;
+
+}
+.circle-section{
+  border:5rpx solid white;
+  height:160rpx;
+  line-height:160rpx;
+  width:160rpx;
+}
+.cols-3-tab{
+  width:25%;
+  text-align: center;
+}
+.text-gray{
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tab{
+  position: fixed;
+  bottom:40rpx;
+  right: 40rpx;
+  color: #1e90ff;
+}

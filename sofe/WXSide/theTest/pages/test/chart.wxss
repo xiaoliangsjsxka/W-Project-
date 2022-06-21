@@ -1,0 +1,4 @@
+/* pages/test/chart.wxss */
+page{
+  padding-bottom: 100rpx;
+}

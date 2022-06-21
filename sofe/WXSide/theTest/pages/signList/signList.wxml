@@ -1,0 +1,7 @@
+<!--pages/signDetail/signDetail.wxml-->
+<view class="signList">
+  <view class="ActiveItem" wx:for="{{active}}" data-_id="{{item._id}}" bindtap="signDetail">
+    <view class="title">签到标题:{{item.title}}</view>
+    <view class="cuIcon-right text-green"></view>
+  </view>
+</view>

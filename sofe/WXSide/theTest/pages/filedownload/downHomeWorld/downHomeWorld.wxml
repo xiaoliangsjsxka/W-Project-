@@ -1,0 +1,6 @@
+<!--pages/filedownload/downHomeWorld/downHomeWorld.wxml-->
+<view>本次作业上交列表</view>
+<view class="cu-form-group margin-top" bindtap="download" wx:for="{{homwWorldList}}" data-username="{{item.name}}" data-fileName="{{item.fileName}}" wx:key="index">
+  <view class="title">{{item.name}}的作业</view>
+  <text class="cuIcon-down text-orange"></text>
+</view>

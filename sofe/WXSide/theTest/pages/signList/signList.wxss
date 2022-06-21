@@ -1,0 +1,16 @@
+/* pages/signDetail/signDetail.wxss */
+.signList {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.ActiveItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+.title {
+  font-size: 34rpx;
+}
